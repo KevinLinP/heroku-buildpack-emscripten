@@ -6,4 +6,3 @@ unzip main.zip
 cd emsdk-main
 ./emsdk install latest
 ./emsdk activate latest
-source ./emsdk_env.sh
