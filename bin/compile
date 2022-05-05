@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd $1
+wget https://github.com/emscripten-core/emsdk/archive/refs/heads/main.zip
+unzip main.zip
+cd emsdk-main
+./emsdk install latest
+./emsdk activate latest
+source ./emsdk_env.sh
