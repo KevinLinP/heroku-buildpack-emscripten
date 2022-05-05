@@ -1,8 +1,18 @@
 #!/bin/sh
 
-cd $1
-wget https://github.com/emscripten-core/emsdk/archive/refs/heads/main.zip
-unzip main.zip
+cd $2
+
+if [ ! -f "main.zip" ]; then
+  wget https://github.com/emscripten-core/emsdk/archive/refs/heads/main.zip
+fi
+
+if [ ! -d "emsdk-main" ]; then
+  unzip main.zip
+fi
+
 cd emsdk-main
 ./emsdk install latest
 ./emsdk activate latest
+cd ..
+
+rsync -r emsdk-main $1
