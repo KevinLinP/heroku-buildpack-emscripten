@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "EmscriptenFramework"
+exit 0
