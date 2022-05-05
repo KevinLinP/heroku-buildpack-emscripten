@@ -15,4 +15,4 @@ cd emsdk-main
 ./emsdk activate latest
 cd ..
 
-rsync -r emsdk-main $1
+scp -r emsdk-main $1
